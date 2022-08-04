@@ -144,7 +144,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
 
   Future<void> _scheduleDailyTenAMNotification() async {
     await localNotifications.zonedSchedule(
-        0,
+        10,
         'Учись!',
         'Выделить полчаса на занятия программированием',
         _nextInstanceOfTenAM(),
@@ -172,7 +172,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
 
   Future<void> _scheduleDailyEightAMNotification() async {
     await localNotifications.zonedSchedule(
-        0,
+        8,
         'Уведомление',
         'Сейчас 8 утра в Мск',
         _nextInstanceOfEightAM(),
@@ -195,7 +195,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await localNotifications.periodicallyShow(
-        0,
+        1,
         'Повторяющееся уведомление',
         'Уведомление каждую минуту',
         RepeatInterval.everyMinute,
